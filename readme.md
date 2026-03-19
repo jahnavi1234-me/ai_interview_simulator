@@ -81,7 +81,7 @@ Final Report (Score + Insights)
 
 ## Folder Structure
  ai_interview_simulator/
-│
+│ 
 ├── app/
 │   └── app.py
 │
