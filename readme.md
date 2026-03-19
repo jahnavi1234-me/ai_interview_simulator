@@ -79,9 +79,11 @@ Final Report (Score + Insights)
 
 ---
 
-## Folder Structure
- ai_interview_simulator/
-│ 
+### Folder Structure
+
+```
+ai_interview_simulator/
+│
 ├── app/
 │   └── app.py
 │
@@ -105,7 +107,7 @@ Final Report (Score + Insights)
 ├── requirements.txt
 │
 └── README.md
-
+```
 ## Installation & Setup
 
 1️ Clone the repository
