@@ -1,153 +1,179 @@
 # AI Interview Simulator
+## Project Description
 
-## Overview
+The AI Interview Simulator is a Generative AI-based application that simulates real interview scenarios. It dynamically retrieves questions based on a given topic and difficulty level, evaluates user responses using semantic similarity, and provides structured feedback including strengths, weaknesses, and improvement suggestions.
 
-AI Interview Simulator is an intelligent system that simulates a real technical interview using Generative AI.  
-The system dynamically retrieves interview questions based on topic and difficulty, evaluates candidate answers using an LLM, and generates a final performance report.
-
-The project combines Retrieval Augmented Generation (RAG), vector search, and LLM evaluation to create an automated interview environment.
-
----
+This project helps users practice interviews, improve answering skills, and get AI-driven feedback.
 
 ## Problem Statement
 
-Technical interview preparation is difficult because:
+Many students struggle with:
 
-- Candidates do not get realistic interview simulations
-- Manual evaluation of answers is time consuming
-- Practicing with static question lists does not reflect real interview scenarios
-- Feedback is often unavailable or delayed
+Lack of real interview practice
 
-This project solves these problems by building an **AI powered interview simulator** that:
+No personalized feedback on answers
 
-- retrieves relevant interview questions
-- evaluates candidate answers automatically
-- provides structured feedback and scoring
-- generates a final interview performance report
+Difficulty understanding strengths and weaknesses
 
----
 
-## Key Features
+This project solves these problems by providing:
 
-- Topic based interview simulation
-- Difficulty selection (Easy / Medium / Hard)
-- Semantic question retrieval using vector search
-- LLM based answer evaluation
-- Skill extraction from candidate responses
-- Automatic final interview report
-- Streamlit based interactive interface
-- Time tracking during interview
+AI-based interview simulation
 
----
+Automated answer evaluation
 
-## System Architecture
+Intelligent feedback generation
 
-User → Streamlit UI  
-↓  
-Interview Agent  
-↓  
-Question Retriever (RAG)  
-↓  
-Vector Database (FAISS)  
-↓  
-LLM Evaluation  
-↓  
-Interview Report Generator
+## Features
 
----
+ Topic-based question retrieval
 
+ Difficulty levels (Easy, Medium, Hard)
+
+ Semantic similarity-based scoring
+
+ Score out of 100 for each answer
+
+ Displays correct answers
+
+ Strengths & weaknesses analysis
+
+ AI-generated final feedback
+
+ Restart interview option
+
+ FAISS-based fast retrieval system
 ## Technologies Used
 
-- Python
-- Streamlit
-- FAISS Vector Database
-- Sentence Transformers
-- Ollama LLM (Mistral)
-- Retrieval Augmented Generation (RAG)
-- HuggingFace Datasets
-- NumPy
-- Regex based NLP
+Python 3.11
+
+Streamlit – UI development
+
+FAISS – Vector database
+
+Sentence Transformers – Embeddings
+
+Hugging Face Transformers – LLM feedback
+
+Datasets Library – Interview dataset
+
+NumPy – Numerical operations
+## Project Architecture
+
+User Input (Topic + Difficulty)
+        ↓
+Retriever (FAISS Vector Search)
+        ↓
+Top Questions Selected
+        ↓
+User Answers Input
+        ↓
+Evaluator (Semantic Similarity)
+        ↓
+Score Generation (0–100)
+        ↓
+LLM Feedback Generator
+        ↓
+Final Report (Score + Insights)
+
 
 ---
 
 ## Folder Structure
-AI_Interview_Simulator
 
+ai_interview_simulator/
 │
-├── app
-│ └── app.py
+├── app/
+│   └── app.py
 │
-├── data
-│ └── interviewQuestion.txt
+├── src/
+│   ├── rag/
+│   │   └── retriever.py
+│   │
+│   ├── embeddings/
+│   │   └── model.py
+│   │
+│   ├── evaluator/
+│   │   ├── evaluator.py
+│   │   └── llm_feedback.py
+│   │
+│   ├── utils/
+│   │   ├── config.py
+│   │   └── vector_store.py
 │
-├── src
+├── vectordb/
 │
-│ ├── agent
-│ │ └── interview_agent.py
-│
-│ ├── embeddings
-│ │ └── embedding_model.py
-│
-│ ├── evaluator
-│ │ ├── answer_evaluator.py
-│ │ └── interview_report.py
-│
-│ ├── llm
-│ │ └── llm_pipeline.py
-│
-│ ├── rag
-│ │ └── question_retriever.py
-│
-│ ├── utils
-│ │ ├── config.py
-│ │ ├── skill_extractor.py
-│ │ └── vectorStore.py
-│
-└── requirements.txt
+├── requirements.txt
+└── README.md
 
----
+## Installation & Setup
 
-## How It Works
+1️ Clone the repository
 
-1. Interview topic is entered by the user
-2. Topic is converted into an embedding
-3. FAISS vector database retrieves relevant questions
-4. Questions are shown one by one to the user
-5. User answers are evaluated by an LLM
-6. Score and feedback are generated
-7. Skills are extracted from responses
-8. Final interview report is generated
+git clone https://github.com/your-username/ai_interview_simulator.git
+cd ai_interview_simulator
 
----
+2️ Create virtual environment
 
-## Dataset
+python -m venv venv
 
-Interview questions are loaded from:
+3️ Activate environment
 
-HuggingFace Dataset:
-`ImeshThana/interview_questions`
+Windows:
 
----
 
-## Installation
+venv\Scripts\activate
 
-```bash
+4️ Install dependencies
+
 pip install -r requirements.txt
-Run Application
+
+5️ Run the application
+
 streamlit run app/app.py
+## Example Output
+
+Question: What is the difference between a list and a tuple?
+
+Your Answer: Lists are mutable, tuples are immutable.
+
+Score: 92/100
+
+Correct Answer:
+Lists can be modified after creation, whereas tuples are immutable.
+
+Final Score: 85/100
+
+Strengths:
+- Strong understanding of Python basics
+
+Weaknesses:
+- Needs improvement in advanced concepts
+
+Improvements:
+- Practice more coding-based questions
+
+AI Feedback:
+The candidate demonstrates good foundational knowledge...
+<img width="1920" height="1080" alt="Screenshot (215)" src="https://github.com/user-attachments/assets/b2a85713-ee66-480a-969c-f4cc5927e192" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/fa084005-2e2d-4b3b-9f6e-b986b858d207" />
+
+
 ## Future Improvements
 
-Voice based interview
+ Voice-based interview system
 
-Multi-language interview support
+ Coding interview support
 
-Resume based personalized interviews
+ Multi-language support
 
-Real time emotion analysis
+ Detailed analytics dashboard
 
-Interview analytics dashboard
+ Cloud deployment (Docker + CI/CD)
+
+ Advanced LLM integration (GPT / Llama)
 
 ## Author
 
-Jahnavi
-AI / Generative AI Projects
+Jahnavi Besabathini
+
