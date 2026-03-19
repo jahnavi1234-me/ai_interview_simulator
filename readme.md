@@ -80,30 +80,36 @@ Final Report (Score + Insights)
 ---
 
 ## Folder Structure
+Folder Structure
 
 ai_interview_simulator/
+
 │
 ├── app/
-│   └── app.py
+│ └── app.py
+
 │
 ├── src/
-│   ├── rag/
-│   │   └── retriever.py
-│   │
-│   ├── embeddings/
-│   │   └── model.py
-│   │
-│   ├── evaluator/
-│   │   ├── evaluator.py
-│   │   └── llm_feedback.py
-│   │
-│   ├── utils/
-│   │   ├── config.py
-│   │   └── vector_store.py
+│ ├── rag/
+│ │ └── retriever.py
+│ │
+│ ├── embeddings/
+│ │ └── model.py
+│ │
+│ ├── evaluator/
+│ │ ├── evaluator.py
+│ │ └── llm_feedback.py
+│ │
+│ ├── utils/
+│ │ ├── config.py
+│ │ └── vector_store.py
+
 │
 ├── vectordb/
+
 │
 ├── requirements.txt
+
 └── README.md
 
 ## Installation & Setup
