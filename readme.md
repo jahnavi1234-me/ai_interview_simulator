@@ -135,14 +135,14 @@ pip install -r requirements.txt
 streamlit run app/app.py
 ## Example Output
 
-Question: What is the difference between a list and a tuple?
+Question: What are decorators in Python?
 
-Your Answer: Lists are mutable, tuples are immutable.
+Your Answer:Decorators in Python are functions that wrap another function to extend or modify its behavior without changing its original code.
 
 Score: 92/100
 
 Correct Answer:
-Lists can be modified after creation, whereas tuples are immutable.
+Correct Answer: A decorator is a function that takes another function and extends its behavior without explicitly modifying it. It is a powerful tool for wrapping functions (e.g., for logging, timing, access control) using the @decorator_name syntax.
 
 Final Score: 85/100
 
@@ -159,7 +159,7 @@ AI Feedback:
 The candidate demonstrates good foundational knowledge...
 <img width="1920" height="1080" alt="Screenshot (215)" src="https://github.com/user-attachments/assets/b2a85713-ee66-480a-969c-f4cc5927e192" />
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/fa084005-2e2d-4b3b-9f6e-b986b858d207" />
-
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/7a786f2d-d0dc-4a8d-86a7-dee21f599716" />
 
 ## Future Improvements
 
